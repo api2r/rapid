@@ -1,7 +1,8 @@
 test_that("class_reference() errors informatively for non-scalar ref_uri", {
-  expect_error(
+  stbl::expect_pkg_error_classes(
     class_reference(ref_uri = c("a", "b")),
-    class = "stbl_error_non_scalar"
+    "stbl",
+    "non_scalar"
   )
 })
 

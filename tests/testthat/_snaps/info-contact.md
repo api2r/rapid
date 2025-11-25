@@ -38,9 +38,8 @@
       class_contact(name = "A", url = "https://example.com", email = "not a real email")
     Condition
       Error:
-      ! `email` must match the provided regex pattern.
-      x Some values do not match.
-      * Locations: 1
+      ! `email` must match the regex pattern "^[^@]+@[^@]+$"
+      x "not a real email" fails the check.
 
 # class_contact() returns a contact when everything is ok
 

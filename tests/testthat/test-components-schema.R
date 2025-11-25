@@ -1,24 +1,28 @@
 test_that("class_schema() errors informatively for bad type", {
-  expect_error(
+  stbl::expect_pkg_error_classes(
     class_schema(type = "bad"),
-    class = "stbl_error_fct_levels"
+    "stbl",
+    "fct_levels"
   )
   test_result <- class_schema(type = "string")
-  expect_error(
+  stbl::expect_pkg_error_classes(
     test_result@type <- "bad",
-    class = "stbl_error_fct_levels"
+    "stbl",
+    "fct_levels"
   )
 })
 
 test_that("class_schema() errors informatively for non-scalar type", {
-  expect_error(
+  stbl::expect_pkg_error_classes(
     class_schema(type = c("string", "integer")),
-    class = "stbl_error_size_too_large"
+    "stbl",
+    "size_too_large"
   )
   test_result <- class_schema(type = "string")
-  expect_error(
+  stbl::expect_pkg_error_classes(
     test_result@type <- c("string", "integer"),
-    class = "stbl_error_size_too_large"
+    "stbl",
+    "size_too_large"
   )
 })
 
@@ -68,7 +72,9 @@ test_that("as_schema() returns expected objects", {
       list(type = "string", nullable = TRUE, description = "A nullable string.")
     ),
     class_schema(
-      type = "string", nullable = TRUE, description = "A nullable string."
+      type = "string",
+      nullable = TRUE,
+      description = "A nullable string."
     )
   )
 

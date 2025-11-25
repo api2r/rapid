@@ -19,12 +19,14 @@
 as_api_object <- S7::new_generic(
   "as_api_object",
   "x",
-  function(x,
-           target_class,
-           ...,
-           alternate_names = NULL,
-           arg = caller_arg(x),
-           call = caller_env()) {
+  function(
+    x,
+    target_class,
+    ...,
+    alternate_names = NULL,
+    arg = caller_arg(x),
+    call = caller_env()
+  ) {
     if (missing(x)) {
       return(target_class())
     }
@@ -37,15 +39,14 @@ as_api_object <- S7::new_generic(
   }
 )
 
-S7::method(
-  as_api_object,
-  class_list | class_character
-) <- function(x,
-              target_class,
-              ...,
-              alternate_names = NULL,
-              arg = caller_arg(x),
-              call = caller_env()) {
+S7::method(as_api_object, class_list | class_character) <- function(
+  x,
+  target_class,
+  ...,
+  alternate_names = NULL,
+  arg = caller_arg(x),
+  call = caller_env()
+) {
   force(arg)
   x <- .validate_for_as_class(
     x,
@@ -59,24 +60,25 @@ S7::method(
   })
 }
 
-S7::method(
-  as_api_object,
-  NULL | S7::new_S3_class("S7_missing")
-) <- function(x,
-              target_class,
-              ...,
-              alternate_names = NULL,
-              arg = caller_arg(x),
-              call = caller_env()) {
+S7::method(as_api_object, NULL | S7::new_S3_class("S7_missing")) <- function(
+  x,
+  target_class,
+  ...,
+  alternate_names = NULL,
+  arg = caller_arg(x),
+  call = caller_env()
+) {
   target_class()
 }
 
-S7::method(as_api_object, class_any) <- function(x,
-                                                 target_class,
-                                                 ...,
-                                                 alternate_names = NULL,
-                                                 arg = caller_arg(x),
-                                                 call = caller_env()) {
+S7::method(as_api_object, class_any) <- function(
+  x,
+  target_class,
+  ...,
+  alternate_names = NULL,
+  arg = caller_arg(x),
+  call = caller_env()
+) {
   target_class_nm <- class(target_class())[[1]]
   cli::cli_abort(
     "Can't coerce {.arg {arg}} {.cls {class(x)}} to {.cls {target_class_nm}}.",
@@ -85,11 +87,13 @@ S7::method(as_api_object, class_any) <- function(x,
   )
 }
 
-.validate_for_as_class <- function(x,
-                                   target_class,
-                                   alternate_names = NULL,
-                                   x_arg = caller_arg(x),
-                                   call = caller_env()) {
+.validate_for_as_class <- function(
+  x,
+  target_class,
+  alternate_names = NULL,
+  x_arg = caller_arg(x),
+  call = caller_env()
+) {
   if (!length(x)) {
     return(NULL)
   }

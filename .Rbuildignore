@@ -10,3 +10,4 @@
 ^pkgdown$
 ^principles\.md$
 ^exploration$
+^data-raw$

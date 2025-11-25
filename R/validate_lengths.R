@@ -1,9 +1,11 @@
-validate_lengths <- function(obj,
-                             key_name,
-                             required_same = NULL,
-                             required_any = NULL,
-                             optional_same = NULL,
-                             optional_any = NULL) {
+validate_lengths <- function(
+  obj,
+  key_name,
+  required_same = NULL,
+  required_any = NULL,
+  optional_same = NULL,
+  optional_any = NULL
+) {
   key_length <- .prop_lengths(obj, key_name)
 
   if (!key_length) {
@@ -41,6 +43,7 @@ validate_lengths <- function(obj,
   }
   return(character())
 }
+
 .msg_must_have_same <- function(key_name, key_length, not_same, bad_lengths) {
   c(
     cli::format_inline(
@@ -51,7 +54,8 @@ validate_lengths <- function(obj,
   )
 }
 
-.check_non_empty <- function(obj, key_name, prop_names) { # nocov start
+.check_non_empty <- function(obj, key_name, prop_names) {
+  # nocov start
   prop_lengths <- .prop_lengths(obj, prop_names)
   empty <- prop_names[prop_lengths == 0]
   if (any(empty)) {
@@ -78,10 +82,12 @@ validate_lengths <- function(obj,
     )
   }
 }
-.msg_not_same_or_empty <- function(key_name,
-                                   key_length,
-                                   bad_props,
-                                   bad_lengths) {
+.msg_not_same_or_empty <- function(
+  key_name,
+  key_length,
+  bad_props,
+  bad_lengths
+) {
   c(
     cli::format_inline(
       "{.arg {bad_props}} must be empty or have the same length as {.arg {key_name}}"

@@ -66,9 +66,11 @@ test_that("as_scopes() errors informatively for bad classes", {
 })
 
 test_that("as_scopes() errors informatively for weird lists", {
-  expect_error(
+  stbl::expect_pkg_error_classes(
     as_scopes(list(a = mean)),
-    class = "stbl_error_coerce_character"
+    "stbl",
+    "coerce",
+    "character"
   )
 })
 
