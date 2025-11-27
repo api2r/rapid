@@ -24,7 +24,7 @@ Imports:
     rlang (>= 1.1.0),
     S7 (>= 0.2.0),
     snakecase,
-    stbl,
+    stbl (>= 0.2.0.9000),
     tibble,
     tibblify (>= 0.3.1.9000),
     xml2,
@@ -33,7 +33,8 @@ Suggests:
     httr2,
     testthat (>= 3.0.0)
 Remotes:
-    tibblify=mgirlich/tibblify#193
+    tibblify=mgirlich/tibblify#193,
+    stbl=wranglezone/stbl
 Config/testthat/edition: 3
 Config/testthat/parallel: true
 Encoding: UTF-8
