@@ -10,3 +10,7 @@
 ^pkgdown$
 ^principles\.md$
 ^exploration$
+^data-raw$
+^\.positai$
+^\.claude$
+^AGENTS\.md$

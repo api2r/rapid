@@ -37,9 +37,11 @@ S7::method(expand_servers, class_rapid) <- function(x) {
   return(x)
 }
 
-S7::method(expand_servers, class_any) <- function(x,
-                                                  arg = caller_arg(x),
-                                                  call = caller_env()) {
+S7::method(expand_servers, class_any) <- function(
+  x,
+  arg = caller_arg(x),
+  call = caller_env()
+) {
   cli::cli_abort(
     "{.arg {arg}} {.cls {class(x)}} must be a {.cls rapid}.",
     call = call

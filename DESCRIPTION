@@ -14,9 +14,9 @@ Description: Convert an 'API' description ('APID'), such as one that
 License: MIT + file LICENSE
 URL: https://rapid.api2r.org/, https://github.com/jonthegeek/rapid
 BugReports: https://github.com/jonthegeek/rapid/issues
-Depends: 
+Depends:
     R (>= 3.5.0)
-Imports: 
+Imports:
     cli,
     glue,
     jsonlite,
@@ -24,22 +24,26 @@ Imports:
     rlang (>= 1.1.0),
     S7 (>= 0.2.0),
     snakecase,
-    stbl,
+    stbl (>= 0.3.0),
     tibble,
     tibblify (>= 0.3.1.9000),
     xml2,
     yaml
-Suggests: 
+Suggests:
+    httr2,
     testthat (>= 3.0.0)
 Remotes:
-    tibblify=mgirlich/tibblify#193
+    stbl=wranglezone/stbl,
+    tibblify=wranglezone/tibblify
 Config/testthat/edition: 3
 Config/testthat/parallel: true
 Encoding: UTF-8
 Language: en-US
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.2
-Collate: 
+RoxygenNote: 7.3.3
+Collate:
+    'aaa-conditions.R'
+    'aaa-shared_params.R'
     'properties.R'
     'security.R'
     'paths.R'
@@ -67,6 +71,7 @@ Collate:
     'components-security_scheme-oauth2-token_flow.R'
     'components-security_scheme-oauth2.R'
     'rapid-package.R'
+    'swagger_to_openapi.R'
     'urls.R'
     'utils.R'
     'validate_in.R'

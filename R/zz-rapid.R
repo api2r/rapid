@@ -5,6 +5,47 @@
 #' @include security.R
 NULL
 
+# Helper functions ----
+
+# These must be defined *before* class_rapid right now.
+
+.construct_rapid <- function(
+  info = class_info(),
+  ...,
+  servers = class_servers(),
+  components = class_components(),
+  paths = class_paths(),
+  security = class_security()
+) {
+  check_dots_empty()
+  S7::new_object(
+    S7::S7_object(),
+    info = as_info(info),
+    servers = as_servers(servers),
+    components = as_components(components),
+    paths = as_paths(paths),
+    security = as_security(security)
+  )
+}
+
+.validate_rapid <- function(self) {
+  c(
+    validate_lengths(
+      self,
+      key_name = "info",
+      optional_any = c("components", "paths", "security", "servers")
+    ),
+    validate_in_specific(
+      values = self@security@name,
+      enums = self@components@security_schemes@name,
+      value_name = "security",
+      enum_name = "the {.arg security_schemes} defined in {.arg components}"
+    )
+  )
+}
+
+# class_rapid ----
+
 #' R API description object
 #'
 #' An object that represents an API.
@@ -62,42 +103,15 @@ class_rapid <- S7::new_class(
     paths = class_paths,
     security = class_security
   ),
-  constructor = function(info = class_info(),
-                         ...,
-                         servers = class_servers(),
-                         components = class_components(),
-                         paths = class_paths(),
-                         security = class_security()) {
-    check_dots_empty()
-    S7::new_object(
-      S7::S7_object(),
-      info = as_info(info),
-      servers = as_servers(servers),
-      components = as_components(components),
-      paths = as_paths(paths),
-      security = as_security(security)
-    )
-  },
-  validator = function(self) {
-    c(
-      validate_lengths(
-        self,
-        key_name = "info",
-        optional_any = c("components", "paths", "security", "servers")
-      ),
-      validate_in_specific(
-        values = self@security@name,
-        enums = self@components@security_schemes@name,
-        value_name = "security",
-        enum_name = "the {.arg security_schemes} defined in {.arg components}"
-      )
-    )
-  }
+  constructor = .construct_rapid,
+  validator = .validate_rapid
 )
 
 S7::method(length, class_rapid) <- function(x) {
   length(x@info)
 }
+
+# as_rapid ----
 
 #' Coerce lists and urls to rapid objects
 #'
@@ -121,10 +135,12 @@ S7::method(length, class_rapid) <- function(x) {
 #' as_rapid()
 as_rapid <- S7::new_generic("as_rapid", "x")
 
-S7::method(as_rapid, S7::new_S3_class("url")) <- function(x,
-                                                          ...,
-                                                          arg = caller_arg(x),
-                                                          call = caller_env()) {
+S7::method(as_rapid, S7::new_S3_class("url")) <- function(
+  x,
+  ...,
+  arg = caller_arg(x),
+  call = caller_env()
+) {
   url_string <- .url_to_string(x)
   x <- .url_fetch(url_string)
   if (!length(x$info$`x-origin`)) {
@@ -133,10 +149,12 @@ S7::method(as_rapid, S7::new_S3_class("url")) <- function(x,
   as_rapid(x, ..., arg = arg, call = call)
 }
 
-S7::method(as_rapid, class_character) <- function(x,
-                                                  ...,
-                                                  arg = caller_arg(x),
-                                                  call = caller_env()) {
+S7::method(as_rapid, class_character) <- function(
+  x,
+  ...,
+  arg = caller_arg(x),
+  call = caller_env()
+) {
   if (.is_url_string(x)) {
     return(as_rapid(url(x), ..., arg = arg, call = call))
   }
@@ -144,10 +162,12 @@ S7::method(as_rapid, class_character) <- function(x,
   as_rapid(x, ..., arg = arg, call = call)
 }
 
-S7::method(as_rapid, class_list) <- function(x,
-                                             ...,
-                                             arg = caller_arg(x),
-                                             call = caller_env()) {
+S7::method(as_rapid, class_list) <- function(
+  x,
+  ...,
+  arg = caller_arg(x),
+  call = caller_env()
+) {
   x$paths <- .parse_paths(x$paths, x$openapi, x, call)
   rlang::try_fetch(
     {
@@ -164,10 +184,12 @@ S7::method(as_rapid, class_list) <- function(x,
   )
 }
 
-S7::method(as_rapid, class_any) <- function(x,
-                                            ...,
-                                            arg = caller_arg(x),
-                                            call = caller_env()) {
+S7::method(as_rapid, class_any) <- function(
+  x,
+  ...,
+  arg = caller_arg(x),
+  call = caller_env()
+) {
   rlang::try_fetch(
     {
       x <- as_api_object(x, class_rapid, ..., arg = arg, call = call)
