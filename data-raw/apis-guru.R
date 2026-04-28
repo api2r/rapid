@@ -1,5 +1,7 @@
 # Make sure we can parse all apis.guru APIs.
 
+stop("apisguru is broken and can't install, so none of this works")
+
 library(apisguru)
 library(dplyr)
 library(tidyr)
@@ -24,7 +26,9 @@ check_url_exists <- purrr::possibly(
       httr2::req_method("HEAD") |>
       httr2::req_perform() |>
       httr2::resp_status() |>
-      {\(status) status < 400}()
+      {
+        \(status) status < 400
+      }()
   },
   otherwise = FALSE
 )

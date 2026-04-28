@@ -39,8 +39,7 @@ class_scopes <- S7::new_class(
     name = class_character,
     description = class_character
   ),
-  constructor = function(name = character(),
-                         description = character()) {
+  constructor = function(name = character(), description = character()) {
     S7::new_object(
       S7::S7_object(),
       name = name %|0|% character(),
@@ -81,7 +80,7 @@ S7::method(
 ) <- function(x, ..., arg = caller_arg(x), call = caller_env()) {
   force(arg)
   x <- unlist(x)
-  x <- stabilize_chr(x, x_arg = arg)
+  x <- stbl::stabilize_chr(x, x_arg = arg)
   if (!rlang::is_named2(x)) {
     cli::cli_abort(
       "{.arg {arg}} must be a named character vector.",
@@ -94,9 +93,11 @@ S7::method(
   )
 }
 
-S7::method(as_scopes, class_any) <- function(x,
-                                             ...,
-                                             arg = caller_arg(x),
-                                             call = caller_env()) {
+S7::method(as_scopes, class_any) <- function(
+  x,
+  ...,
+  arg = caller_arg(x),
+  call = caller_env()
+) {
   as_api_object(x, class_scopes, ..., arg = arg, call = call)
 }

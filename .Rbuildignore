@@ -11,3 +11,5 @@
 ^principles\.md$
 ^exploration$
 ^data-raw$
+^\.positai$
+^\.claude$
