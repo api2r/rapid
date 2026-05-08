@@ -24,7 +24,7 @@ A `paths` S7 object with details about API endpoints.
 
 ## See also
 
-paths object
+paths object:
 [`as_paths()`](https://rapid.api2r.org/reference/as_paths.md)
 
 ## Examples

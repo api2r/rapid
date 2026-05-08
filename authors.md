@@ -11,7 +11,7 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/jonthegeek/rapid/blob/main/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/api2r/rapid/blob/main/DESCRIPTION)
 
 Harmon J (2026). *rapid: R 'API' Descriptions*. R package version
 0.0.0.9003, <https://rapid.api2r.org/>.

@@ -27,7 +27,7 @@ with absolute server paths.
 
 ## See also
 
-rapid object
+rapid object:
 [`as_api_object()`](https://rapid.api2r.org/reference/as_api_object.md),
 [`as_rapid()`](https://rapid.api2r.org/reference/as_rapid.md),
 [`class_rapid()`](https://rapid.api2r.org/reference/class_rapid.md)

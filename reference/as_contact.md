@@ -46,7 +46,8 @@ A `contact` as returned by
 
 ## See also
 
-info object [`as_info()`](https://rapid.api2r.org/reference/as_info.md),
+info object:
+[`as_info()`](https://rapid.api2r.org/reference/as_info.md),
 [`as_license()`](https://rapid.api2r.org/reference/as_license.md),
 [`as_origin()`](https://rapid.api2r.org/reference/as_origin.md),
 [`class_contact()`](https://rapid.api2r.org/reference/class_contact.md),

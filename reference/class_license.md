@@ -44,7 +44,7 @@ A `license` S7 object describing allowed usage of the API, with fields
 
 ## See also
 
-info object
+info object:
 [`as_contact()`](https://rapid.api2r.org/reference/as_contact.md),
 [`as_info()`](https://rapid.api2r.org/reference/as_info.md),
 [`as_license()`](https://rapid.api2r.org/reference/as_license.md),

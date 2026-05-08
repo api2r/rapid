@@ -13,7 +13,7 @@ Install the development version of rapid from
 
 ``` r
 # install.packages("pak")
-pak::pak("jonthegeek/rapid")
+pak::pak("api2r/rapid")
 ```
 
 ## Usage
@@ -24,5 +24,5 @@ and [{mockplumber}](https://jonthegeek.github.io/mockplumber/).
 ## Code of Conduct
 
 Please note that the rapid project is released with a [Contributor Code
-of Conduct](https://jonthegeek.github.io/rapid/CODE_OF_CONDUCT.html). By
+of Conduct](https://api2r.github.io/rapid/CODE_OF_CONDUCT.html). By
 contributing to this project, you agree to abide by its terms.

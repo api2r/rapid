@@ -42,7 +42,7 @@ A `servers` S7 object, with properties `url`, `description`, and
 
 ## See also
 
-servers object
+servers object:
 [`as_server_variables()`](https://rapid.api2r.org/reference/as_server_variables.md),
 [`as_servers()`](https://rapid.api2r.org/reference/as_servers.md),
 [`as_string_replacements()`](https://rapid.api2r.org/reference/as_string_replacements.md),

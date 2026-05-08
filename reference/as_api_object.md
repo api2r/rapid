@@ -59,7 +59,7 @@ An object with the specified `target_class`.
 
 ## See also
 
-rapid object
+rapid object:
 [`as_rapid()`](https://rapid.api2r.org/reference/as_rapid.md),
 [`class_rapid()`](https://rapid.api2r.org/reference/class_rapid.md),
 [`expand_servers()`](https://rapid.api2r.org/reference/expand_servers.md)

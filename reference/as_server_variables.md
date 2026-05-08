@@ -30,7 +30,7 @@ A `server_variables` object as returned by
 
 ## See also
 
-servers object
+servers object:
 [`as_servers()`](https://rapid.api2r.org/reference/as_servers.md),
 [`as_string_replacements()`](https://rapid.api2r.org/reference/as_string_replacements.md),
 [`class_server_variables()`](https://rapid.api2r.org/reference/class_server_variables.md),

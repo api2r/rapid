@@ -44,10 +44,10 @@ A `reference` S7 object pointing (by name) to another part of the
 
 ## See also
 
-reference objects
+reference objects:
 [`as_reference()`](https://rapid.api2r.org/reference/as_reference.md)
 
-components object
+components object:
 [`as_api_key_security_scheme()`](https://rapid.api2r.org/reference/as_api_key_security_scheme.md),
 [`as_components()`](https://rapid.api2r.org/reference/as_components.md),
 [`as_oauth2_authorization_code_flow()`](https://rapid.api2r.org/reference/as_oauth2_authorization_code_flow.md),

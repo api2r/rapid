@@ -32,7 +32,7 @@ A `security` object as returned by
 
 ## See also
 
-security object
+security object:
 [`class_security()`](https://rapid.api2r.org/reference/class_security.md)
 
 ## Examples

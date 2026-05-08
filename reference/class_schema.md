@@ -51,10 +51,10 @@ A `schema` S7 object describing the data type, with fields `type`,
 
 ## See also
 
-schema objects
+schema objects:
 [`as_schema()`](https://rapid.api2r.org/reference/as_schema.md)
 
-components object
+components object:
 [`as_api_key_security_scheme()`](https://rapid.api2r.org/reference/as_api_key_security_scheme.md),
 [`as_components()`](https://rapid.api2r.org/reference/as_components.md),
 [`as_oauth2_authorization_code_flow()`](https://rapid.api2r.org/reference/as_oauth2_authorization_code_flow.md),

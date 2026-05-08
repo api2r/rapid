@@ -38,7 +38,7 @@ A `rapid` object as returned by
 
 ## See also
 
-rapid object
+rapid object:
 [`as_api_object()`](https://rapid.api2r.org/reference/as_api_object.md),
 [`class_rapid()`](https://rapid.api2r.org/reference/class_rapid.md),
 [`expand_servers()`](https://rapid.api2r.org/reference/expand_servers.md)

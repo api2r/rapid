@@ -33,7 +33,7 @@ A `paths` object as returned by
 
 ## See also
 
-paths object
+paths object:
 [`class_paths()`](https://rapid.api2r.org/reference/class_paths.md)
 
 ## Examples

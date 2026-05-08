@@ -32,7 +32,7 @@ A `string_replacements` as returned by
 
 ## See also
 
-servers object
+servers object:
 [`as_server_variables()`](https://rapid.api2r.org/reference/as_server_variables.md),
 [`as_servers()`](https://rapid.api2r.org/reference/as_servers.md),
 [`class_server_variables()`](https://rapid.api2r.org/reference/class_server_variables.md),

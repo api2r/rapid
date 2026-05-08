@@ -53,7 +53,7 @@ A `rapid` S7 object, with properties `info`, `servers`, `components`,
 
 ## See also
 
-rapid object
+rapid object:
 [`as_api_object()`](https://rapid.api2r.org/reference/as_api_object.md),
 [`as_rapid()`](https://rapid.api2r.org/reference/as_rapid.md),
 [`expand_servers()`](https://rapid.api2r.org/reference/expand_servers.md)

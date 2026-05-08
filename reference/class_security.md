@@ -34,7 +34,7 @@ operations.
 
 ## See also
 
-security object
+security object:
 [`as_security()`](https://rapid.api2r.org/reference/as_security.md)
 
 ## Examples

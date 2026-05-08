@@ -49,7 +49,7 @@ A `components` object as returned by
 [`class_components()`](https://rapid.api2r.org/reference/class_components.md)
 for creating `components` objects.
 
-components object
+components object:
 [`as_api_key_security_scheme()`](https://rapid.api2r.org/reference/as_api_key_security_scheme.md),
 [`as_oauth2_authorization_code_flow()`](https://rapid.api2r.org/reference/as_oauth2_authorization_code_flow.md),
 [`as_oauth2_implicit_flow()`](https://rapid.api2r.org/reference/as_oauth2_implicit_flow.md),

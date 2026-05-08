@@ -33,7 +33,7 @@ A `components` S7 object with various schemas for the API.
 [`as_components()`](https://rapid.api2r.org/reference/as_components.md)
 for coercing objects to `components` objects.
 
-components object
+components object:
 [`as_api_key_security_scheme()`](https://rapid.api2r.org/reference/as_api_key_security_scheme.md),
 [`as_components()`](https://rapid.api2r.org/reference/as_components.md),
 [`as_oauth2_authorization_code_flow()`](https://rapid.api2r.org/reference/as_oauth2_authorization_code_flow.md),
