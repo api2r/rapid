@@ -17,7 +17,7 @@ as_api_object(
 \item{x}{The object to coerce. Must be empty, or be a named list or character
 vector having names corresponding to the parameter of the \code{target_class},
 or names that can be coerced to those names via
-\code{\link[snakecase:caseconverter]{snakecase::to_snake_case()}}. Extra names are ignored.}
+\code{\link[snakecase:to_snake_case]{snakecase::to_snake_case()}}. Extra names are ignored.}
 
 \item{target_class}{The S7 class to which the object should be converted.}
 
@@ -43,9 +43,9 @@ An object with the specified \code{target_class}.
 Convert an object into an object with a rapid-style class.
 }
 \seealso{
-rapid object
-\code{\link{as_rapid}()},
-\code{\link{class_rapid}()},
-\code{\link{expand_servers}()}
+rapid object:
+\code{\link[=as_rapid]{as_rapid()}},
+\code{\link[=class_rapid]{class_rapid()}},
+\code{\link[=expand_servers]{expand_servers()}}
 }
 \concept{rapid}

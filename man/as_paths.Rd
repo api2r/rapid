@@ -26,7 +26,7 @@ as_paths()
 as_paths(mtcars)
 }
 \seealso{
-paths object
-\code{\link{class_paths}()}
+paths object:
+\code{\link[=class_paths]{class_paths()}}
 }
 \concept{paths}

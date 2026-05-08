@@ -20,9 +20,9 @@ paths.
 the \code{servers} \code{url} property to an absolute path.
 }
 \seealso{
-rapid object
-\code{\link{as_api_object}()},
-\code{\link{as_rapid}()},
-\code{\link{class_rapid}()}
+rapid object:
+\code{\link[=as_api_object]{as_api_object()}},
+\code{\link[=as_rapid]{as_rapid()}},
+\code{\link[=class_rapid]{class_rapid()}}
 }
 \concept{rapid}

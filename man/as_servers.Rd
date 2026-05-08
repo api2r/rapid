@@ -9,7 +9,7 @@ as_servers(x, ...)
 \arguments{
 \item{x}{The object to coerce. Must be empty or have names "name", "email",
 and/or "url", or names that can be coerced to those names via
-\code{\link[snakecase:caseconverter]{snakecase::to_snake_case()}}. Extra names are ignored.}
+\code{\link[snakecase:to_snake_case]{snakecase::to_snake_case()}}. Extra names are ignored.}
 
 \item{...}{These dots are for future extensions and must be empty.}
 }
@@ -41,11 +41,11 @@ as_servers(
 )
 }
 \seealso{
-servers object
-\code{\link{as_server_variables}()},
-\code{\link{as_string_replacements}()},
-\code{\link{class_server_variables}()},
-\code{\link{class_servers}()},
-\code{\link{class_string_replacements}()}
+servers object:
+\code{\link[=as_server_variables]{as_server_variables()}},
+\code{\link[=as_string_replacements]{as_string_replacements()}},
+\code{\link[=class_server_variables]{class_server_variables()}},
+\code{\link[=class_servers]{class_servers()}},
+\code{\link[=class_string_replacements]{class_string_replacements()}}
 }
 \concept{servers}

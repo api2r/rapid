@@ -9,7 +9,7 @@ as_security(x, ...)
 \arguments{
 \item{x}{The object to coerce. Must be empty or be a list containing a single
 list named "security_schemes", or a name that can be coerced to
-"security_schemes" via \code{\link[snakecase:caseconverter]{snakecase::to_snake_case()}}. Additional names are
+"security_schemes" via \code{\link[snakecase:to_snake_case]{snakecase::to_snake_case()}}. Additional names are
 ignored.}
 
 \item{...}{These dots are for future extensions and must be empty.}
@@ -34,7 +34,7 @@ as_security(
 )
 }
 \seealso{
-security object
-\code{\link{class_security}()}
+security object:
+\code{\link[=class_security]{class_security()}}
 }
 \concept{security}
