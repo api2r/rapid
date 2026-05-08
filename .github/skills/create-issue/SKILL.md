@@ -17,10 +17,10 @@ The hardcoded IDs below are correct for this repo as of 2026-04-28 13:47:49 UTC.
 
 ```bash
 # Repository node ID
-gh api graphql -f query='{ repository(owner: "jonthegeek", name: "rapid") { id } }'
+gh api graphql -f query='{ repository(owner: "api2r", name: "rapid") { id } }'
 
 # Available issue type IDs
-gh api graphql -f query='{ repository(owner: "jonthegeek", name: "rapid") { issueTypes(first: 20) { nodes { id name description } } } }'
+gh api graphql -f query='{ repository(owner: "api2r", name: "rapid") { issueTypes(first: 20) { nodes { id name description } } } }'
 ```
 
 ## Issue type
@@ -29,6 +29,11 @@ Choose the type that best fits the issue:
 
 | Type | ID | Use for |
 |---|---|---|
+| Task | `IT_kwDOCPuMJs4BPtRZ` | A specific piece of work |
+| Bug | `IT_kwDOCPuMJs4BPtRc` | An unexpected problem or behavior |
+| Feature | `IT_kwDOCPuMJs4BPtRe` | A request, idea, or new functionality |
+| Documentation | `IT_kwDOCPuMJs4B5OL_` | Explanations of how or why to do things |
+| Infrastructure | `IT_kwDOCPuMJs4B5OMn` | Infrastructure of a project, like GitHub Actions |
 
 ## Issue title
 

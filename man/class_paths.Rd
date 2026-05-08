@@ -30,7 +30,7 @@ class_paths(
 )
 }
 \seealso{
-paths object
-\code{\link{as_paths}()}
+paths object:
+\code{\link[=as_paths]{as_paths()}}
 }
 \concept{paths}

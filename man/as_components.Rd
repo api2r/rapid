@@ -9,7 +9,7 @@ as_components(x, ..., arg = caller_arg(x), call = caller_env())
 \arguments{
 \item{x}{The object to coerce. Must be empty or be a list containing a single
 list named "security_schemes", or a name that can be coerced to
-"security_schemes" via \code{\link[snakecase:caseconverter]{snakecase::to_snake_case()}}. Additional names are
+"security_schemes" via \code{\link[snakecase:to_snake_case]{snakecase::to_snake_case()}}. Additional names are
 ignored.}
 
 \item{...}{These dots are for future extensions and must be empty.}
@@ -80,28 +80,28 @@ as_components(list(
 \seealso{
 \code{\link[=class_components]{class_components()}} for creating \code{components} objects.
 
-components object
-\code{\link{as_api_key_security_scheme}()},
-\code{\link{as_oauth2_authorization_code_flow}()},
-\code{\link{as_oauth2_implicit_flow}()},
-\code{\link{as_oauth2_security_scheme}()},
-\code{\link{as_oauth2_token_flow}()},
-\code{\link{as_reference}()},
-\code{\link{as_schema}()},
-\code{\link{as_scopes}()},
-\code{\link{as_security_scheme}()},
-\code{\link{as_security_scheme_details}()},
-\code{\link{as_security_schemes}()},
-\code{\link{class_api_key_security_scheme}()},
-\code{\link{class_components}()},
-\code{\link{class_oauth2_authorization_code_flow}()},
-\code{\link{class_oauth2_implicit_flow}()},
-\code{\link{class_oauth2_security_scheme}()},
-\code{\link{class_oauth2_token_flow}()},
-\code{\link{class_reference}()},
-\code{\link{class_schema}()},
-\code{\link{class_scopes}()},
-\code{\link{class_security_scheme_details}()},
-\code{\link{class_security_schemes}()}
+components object:
+\code{\link[=as_api_key_security_scheme]{as_api_key_security_scheme()}},
+\code{\link[=as_oauth2_authorization_code_flow]{as_oauth2_authorization_code_flow()}},
+\code{\link[=as_oauth2_implicit_flow]{as_oauth2_implicit_flow()}},
+\code{\link[=as_oauth2_security_scheme]{as_oauth2_security_scheme()}},
+\code{\link[=as_oauth2_token_flow]{as_oauth2_token_flow()}},
+\code{\link[=as_reference]{as_reference()}},
+\code{\link[=as_schema]{as_schema()}},
+\code{\link[=as_scopes]{as_scopes()}},
+\code{\link[=as_security_scheme]{as_security_scheme()}},
+\code{\link[=as_security_scheme_details]{as_security_scheme_details()}},
+\code{\link[=as_security_schemes]{as_security_schemes()}},
+\code{\link[=class_api_key_security_scheme]{class_api_key_security_scheme()}},
+\code{\link[=class_components]{class_components()}},
+\code{\link[=class_oauth2_authorization_code_flow]{class_oauth2_authorization_code_flow()}},
+\code{\link[=class_oauth2_implicit_flow]{class_oauth2_implicit_flow()}},
+\code{\link[=class_oauth2_security_scheme]{class_oauth2_security_scheme()}},
+\code{\link[=class_oauth2_token_flow]{class_oauth2_token_flow()}},
+\code{\link[=class_reference]{class_reference()}},
+\code{\link[=class_schema]{class_schema()}},
+\code{\link[=class_scopes]{class_scopes()}},
+\code{\link[=class_security_scheme_details]{class_security_scheme_details()}},
+\code{\link[=class_security_schemes]{class_security_schemes()}}
 }
 \concept{components}

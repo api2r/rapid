@@ -9,7 +9,7 @@ Convert an 'API' description ('APID'), such as one that
     (a "rapid").  The rapid object follows the 'OpenAPI Specification' to
     make it easy to convert to and from 'API' documents.
 
-https://rapid.api2r.org/, https://github.com/jonthegeek/rapid
+https://rapid.api2r.org/, https://github.com/api2r/rapid
 
 ### Overall structure
 

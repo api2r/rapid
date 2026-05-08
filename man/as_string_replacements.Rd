@@ -9,7 +9,7 @@ as_string_replacements(x, ...)
 \arguments{
 \item{x}{The object to coerce. Must be empty or be a list of named lists,
 each with names "enum", "default", or "description", or names that can be
-coerced to those names via \code{\link[snakecase:caseconverter]{snakecase::to_snake_case()}}. Additional names
+coerced to those names via \code{\link[snakecase:to_snake_case]{snakecase::to_snake_case()}}. Additional names
 are ignored.}
 
 \item{...}{These dots are for future extensions and must be empty.}
@@ -39,11 +39,11 @@ as_string_replacements(
 )
 }
 \seealso{
-servers object
-\code{\link{as_server_variables}()},
-\code{\link{as_servers}()},
-\code{\link{class_server_variables}()},
-\code{\link{class_servers}()},
-\code{\link{class_string_replacements}()}
+servers object:
+\code{\link[=as_server_variables]{as_server_variables()}},
+\code{\link[=as_servers]{as_servers()}},
+\code{\link[=class_server_variables]{class_server_variables()}},
+\code{\link[=class_servers]{class_servers()}},
+\code{\link[=class_string_replacements]{class_string_replacements()}}
 }
 \concept{servers}

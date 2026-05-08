@@ -1,3 +1,6 @@
+#' @keywords internal
+"_PACKAGE"
+
 ## usethis namespace: start
 #' @importFrom cli format_inline
 #' @importFrom glue glue

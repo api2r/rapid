@@ -11,7 +11,7 @@ as_info(x, ..., arg = caller_arg(x), call = caller_env())
 "version", "contact", "description", "license", "summary",
 "terms_of_service", and/or "origin" (or "x-origin", which will be coerced
 to "origin"), or names that can be coerced to those names via
-\code{\link[snakecase:caseconverter]{snakecase::to_snake_case()}}. Extra names are ignored. This object should
+\code{\link[snakecase:to_snake_case]{snakecase::to_snake_case()}}. Extra names are ignored. This object should
 describe a single API.}
 
 \item{...}{These dots are for future extensions and must be empty.}
@@ -38,13 +38,13 @@ as_info()
 as_info(list(title = "My Cool API", version = "1.0.0"))
 }
 \seealso{
-info object
-\code{\link{as_contact}()},
-\code{\link{as_license}()},
-\code{\link{as_origin}()},
-\code{\link{class_contact}()},
-\code{\link{class_info}()},
-\code{\link{class_license}()},
-\code{\link{class_origin}()}
+info object:
+\code{\link[=as_contact]{as_contact()}},
+\code{\link[=as_license]{as_license()}},
+\code{\link[=as_origin]{as_origin()}},
+\code{\link[=class_contact]{class_contact()}},
+\code{\link[=class_info]{class_info()}},
+\code{\link[=class_license]{class_license()}},
+\code{\link[=class_origin]{class_origin()}}
 }
 \concept{info}

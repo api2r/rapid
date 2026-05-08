@@ -9,7 +9,7 @@ as_rapid(x, ...)
 \arguments{
 \item{x}{The object to coerce. Must be empty or have names "info", "servers",
 "components", "paths", and/or "security", or names that can be coerced to
-those names via \code{\link[snakecase:caseconverter]{snakecase::to_snake_case()}}. Extra names are ignored.
+those names via \code{\link[snakecase:to_snake_case]{snakecase::to_snake_case()}}. Extra names are ignored.
 \code{\link[=url]{url()}} objects are read with \code{\link[jsonlite:fromJSON]{jsonlite::fromJSON()}} or \code{\link[yaml:read_yaml]{yaml::read_yaml()}}
 before conversion.}
 
@@ -27,9 +27,9 @@ properties.
 as_rapid()
 }
 \seealso{
-rapid object
-\code{\link{as_api_object}()},
-\code{\link{class_rapid}()},
-\code{\link{expand_servers}()}
+rapid object:
+\code{\link[=as_api_object]{as_api_object()}},
+\code{\link[=class_rapid]{class_rapid()}},
+\code{\link[=expand_servers]{expand_servers()}}
 }
 \concept{rapid}

@@ -66,9 +66,9 @@ class_rapid(
 )
 }
 \seealso{
-rapid object
-\code{\link{as_api_object}()},
-\code{\link{as_rapid}()},
-\code{\link{expand_servers}()}
+rapid object:
+\code{\link[=as_api_object]{as_api_object()}},
+\code{\link[=as_rapid]{as_rapid()}},
+\code{\link[=expand_servers]{expand_servers()}}
 }
 \concept{rapid}

@@ -9,7 +9,7 @@ as_license(x, ..., arg = caller_arg(x), call = caller_env())
 \arguments{
 \item{x}{The object to coerce. Must be empty or have names "name",
 "identifier", and/or "url", or names that can be coerced to those names via
-\code{\link[snakecase:caseconverter]{snakecase::to_snake_case()}}. Extra names are ignored. This object should
+\code{\link[snakecase:to_snake_case]{snakecase::to_snake_case()}}. Extra names are ignored. This object should
 describe a single license.}
 
 \item{...}{These dots are for future extensions and must be empty.}
@@ -35,13 +35,13 @@ as_license()
 as_license(list(name = "Apache 2.0", identifier = "Apache-2.0"))
 }
 \seealso{
-info object
-\code{\link{as_contact}()},
-\code{\link{as_info}()},
-\code{\link{as_origin}()},
-\code{\link{class_contact}()},
-\code{\link{class_info}()},
-\code{\link{class_license}()},
-\code{\link{class_origin}()}
+info object:
+\code{\link[=as_contact]{as_contact()}},
+\code{\link[=as_info]{as_info()}},
+\code{\link[=as_origin]{as_origin()}},
+\code{\link[=class_contact]{class_contact()}},
+\code{\link[=class_info]{class_info()}},
+\code{\link[=class_license]{class_license()}},
+\code{\link[=class_origin]{class_origin()}}
 }
 \concept{info}

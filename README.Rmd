@@ -18,8 +18,8 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![CRAN status](https://www.r-pkg.org/badges/version/rapid)](https://CRAN.R-project.org/package=rapid)
-[![Codecov test coverage](https://codecov.io/gh/jonthegeek/rapid/branch/main/graph/badge.svg)](https://app.codecov.io/gh/jonthegeek/rapid?branch=main)
-[![R-CMD-check](https://github.com/jonthegeek/rapid/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jonthegeek/rapid/actions/workflows/R-CMD-check.yaml)
+[![Codecov test coverage](https://codecov.io/gh/api2r/rapid/branch/main/graph/badge.svg)](https://app.codecov.io/gh/api2r/rapid?branch=main)
+[![R-CMD-check](https://github.com/api2r/rapid/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/api2r/rapid/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 Convert an API description (APID), such as one that follows the [OpenAPI Specification](https://spec.openapis.org/oas/v3.1.0), to an R API description object.
@@ -40,7 +40,7 @@ Install the development version of rapid from [GitHub](https://github.com/):
 
 ``` r
 # install.packages("pak")
-pak::pak("jonthegeek/rapid")
+pak::pak("api2r/rapid")
 ```
 :::
 
@@ -50,4 +50,4 @@ This package will be used by [{beekeeper}](https://beekeeper.api2r.org/) and [{m
 
 ## Code of Conduct
 
-Please note that the rapid project is released with a [Contributor Code of Conduct](https://jonthegeek.github.io/rapid/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
+Please note that the rapid project is released with a [Contributor Code of Conduct](https://api2r.github.io/rapid/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
