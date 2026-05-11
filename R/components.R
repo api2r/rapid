@@ -35,8 +35,7 @@ class_components <- S7::new_class(
   properties = list(
     security_schemes = class_security_schemes
   ),
-  constructor = function(...,
-                         security_schemes = class_security_schemes()) {
+  constructor = function(..., security_schemes = class_security_schemes()) {
     check_dots_empty()
     S7::new_object(
       S7::S7_object(),
@@ -112,9 +111,6 @@ S7::method(length, class_components) <- function(x) {
 #'     )
 #'   )
 #' ))
-as_components <- function(x,
-                          ...,
-                          arg = caller_arg(x),
-                          call = caller_env()) {
+as_components <- function(x, ..., arg = caller_arg(x), call = caller_env()) {
   as_api_object(x, class_components, ..., arg = arg, call = call)
 }

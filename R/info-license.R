@@ -38,10 +38,12 @@ class_license <- S7::new_class(
     identifier = character_scalar_property("identifier"),
     url = character_scalar_property("url")
   ),
-  constructor = function(name = character(),
-                         ...,
-                         identifier = character(),
-                         url = character()) {
+  constructor = function(
+    name = character(),
+    ...,
+    identifier = character(),
+    url = character()
+  ) {
     check_dots_empty()
     S7::new_object(
       S7::S7_object(),

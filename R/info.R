@@ -63,15 +63,17 @@ class_info <- S7::new_class(
     terms_of_service = character_scalar_property("terms_of_service"),
     origin = class_origin
   ),
-  constructor = function(title = character(),
-                         version = character(),
-                         ...,
-                         contact = class_contact(),
-                         description = character(),
-                         license = class_license(),
-                         summary = character(),
-                         terms_of_service = character(),
-                         origin = class_origin()) {
+  constructor = function(
+    title = character(),
+    version = character(),
+    ...,
+    contact = class_contact(),
+    description = character(),
+    license = class_license(),
+    summary = character(),
+    terms_of_service = character(),
+    origin = class_origin()
+  ) {
     check_dots_empty()
     S7::new_object(
       S7::S7_object(),

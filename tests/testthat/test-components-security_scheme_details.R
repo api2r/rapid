@@ -40,7 +40,8 @@ test_that("class_security_scheme_details() accepts lists of security_schemes", {
   )
   expect_snapshot(
     class_security_scheme_details(list(
-      class_api_key_security_scheme(), class_oauth2_security_scheme()
+      class_api_key_security_scheme(),
+      class_oauth2_security_scheme()
     ))
   )
 })

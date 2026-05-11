@@ -51,8 +51,10 @@ test_that("class_oauth2_security_scheme() works with valid objects", {
   expect_identical(
     S7::prop_names(test_result),
     c(
-      "implicit_flow", "password_flow",
-      "client_credentials_flow", "authorization_code_flow"
+      "implicit_flow",
+      "password_flow",
+      "client_credentials_flow",
+      "authorization_code_flow"
     )
   )
 })

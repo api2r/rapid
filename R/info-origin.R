@@ -36,10 +36,12 @@ class_origin <- S7::new_class(
     format = character_scalar_property("format"),
     version = character_scalar_property("version")
   ),
-  constructor = function(url = character(),
-                         ...,
-                         format = character(),
-                         version = character()) {
+  constructor = function(
+    url = character(),
+    ...,
+    format = character(),
+    version = character()
+  ) {
     check_dots_empty()
     if (is.list(url) && length(url) == 1) {
       url <- unname(unlist(url))
@@ -88,17 +90,20 @@ S7::method(length, class_origin) <- function(x) {
 #'     )
 #'   )
 #' )
-as_origin <- S7::new_generic("as_origin", "x", function(x,
-                                                        ...,
-                                                        arg = caller_arg(x),
-                                                        call = caller_env()) {
-  S7::S7_dispatch()
-})
+as_origin <- S7::new_generic(
+  "as_origin",
+  "x",
+  function(x, ..., arg = caller_arg(x), call = caller_env()) {
+    S7::S7_dispatch()
+  }
+)
 
-S7::method(as_origin, class_any) <- function(x,
-                                             ...,
-                                             arg = caller_arg(x),
-                                             call = caller_env()) {
+S7::method(as_origin, class_any) <- function(
+  x,
+  ...,
+  arg = caller_arg(x),
+  call = caller_env()
+) {
   as_api_object(x, class_origin, ..., arg = arg, call = call)
 }
 

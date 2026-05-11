@@ -45,6 +45,7 @@ jobs:
             any::testthat
             any::usethis
             any::withr
+            Gilead-BioStats/qcthat
             local::.
 
       - name: Install air

@@ -58,10 +58,12 @@ class_security_schemes <- S7::new_class(
     details = class_security_scheme_details,
     description = class_character
   ),
-  constructor = function(name = character(),
-                         details = class_security_scheme_details(),
-                         ...,
-                         description = character()) {
+  constructor = function(
+    name = character(),
+    details = class_security_scheme_details(),
+    ...,
+    description = character()
+  ) {
     check_dots_empty()
     S7::new_object(
       S7::S7_object(),

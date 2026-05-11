@@ -73,7 +73,8 @@ test_that("class_string_replacements() works for a full object", {
       default = c("demo", "8443", "v2"),
       description = c(
         "The active user's folder.",
-        NA, NA
+        NA,
+        NA
       ),
       enum = list(
         NULL,
