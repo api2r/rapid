@@ -30,10 +30,12 @@ class_oauth2_implicit_flow <- S7::new_class(
   properties = list(
     authorization_url = character_scalar_property("authorization_url")
   ),
-  constructor = function(authorization_url = character(),
-                         ...,
-                         refresh_url = character(),
-                         scopes = class_scopes()) {
+  constructor = function(
+    authorization_url = character(),
+    ...,
+    refresh_url = character(),
+    scopes = class_scopes()
+  ) {
     check_dots_empty()
     S7::new_object(
       S7::S7_object(),
@@ -75,9 +77,11 @@ S7::method(length, class_oauth2_implicit_flow) <- function(x) {
 #' @export
 #' @family components_security_schemes
 #' @family components
-as_oauth2_implicit_flow <- function(x,
-                                    ...,
-                                    arg = caller_arg(x),
-                                    call = caller_env()) {
+as_oauth2_implicit_flow <- function(
+  x,
+  ...,
+  arg = caller_arg(x),
+  call = caller_env()
+) {
   as_api_object(x, class_oauth2_implicit_flow, ..., arg = arg, call = call)
 }

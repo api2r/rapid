@@ -88,9 +88,11 @@ S7::method(as_server_variables, class_list) <- function(x) {
   )
 }
 
-S7::method(as_server_variables, class_any) <- function(x,
-                                                       ...,
-                                                       arg = caller_arg(x),
-                                                       call = caller_env()) {
+S7::method(as_server_variables, class_any) <- function(
+  x,
+  ...,
+  arg = caller_arg(x),
+  call = caller_env()
+) {
   as_api_object(x, class_server_variables, ..., arg = arg, call = call)
 }

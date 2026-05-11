@@ -58,9 +58,11 @@ class_servers <- S7::new_class(
     description = class_character,
     variables = class_server_variables
   ),
-  constructor = function(url = character(),
-                         description = character(),
-                         variables = class_server_variables()) {
+  constructor = function(
+    url = character(),
+    description = character(),
+    variables = class_server_variables()
+  ) {
     S7::new_object(
       S7::S7_object(),
       url = url %||% character(),
@@ -140,9 +142,11 @@ S7::method(as_servers, class_list) <- function(x, ..., call = caller_env()) {
   )
 }
 
-S7::method(as_servers, class_any) <- function(x,
-                                              ...,
-                                              arg = caller_arg(x),
-                                              call = caller_env()) {
+S7::method(as_servers, class_any) <- function(
+  x,
+  ...,
+  arg = caller_arg(x),
+  call = caller_env()
+) {
   as_api_object(x, class_servers, ..., arg = arg, call = call)
 }

@@ -43,11 +43,13 @@ class_string_replacements <- S7::new_class(
     enum = enum_property("enum"),
     description = class_character
   ),
-  constructor = function(name = character(),
-                         default = character(),
-                         ...,
-                         enum = list(),
-                         description = character()) {
+  constructor = function(
+    name = character(),
+    default = character(),
+    ...,
+    enum = list(),
+    description = character()
+  ) {
     check_dots_empty()
     S7::new_object(
       S7::S7_object(),
@@ -63,11 +65,12 @@ class_string_replacements <- S7::new_class(
       "name",
       required = "default",
       optional = c("enum", "description")
-    ) %|0|% validate_in_enums(
-      self,
-      value_name = "default",
-      enum_name = "enum"
-    )
+    ) %|0|%
+      validate_in_enums(
+        self,
+        value_name = "default",
+        enum_name = "enum"
+      )
   }
 )
 
@@ -119,9 +122,11 @@ S7::method(as_string_replacements, class_list) <- function(x) {
   )
 }
 
-S7::method(as_string_replacements, class_any) <- function(x,
-                                                          ...,
-                                                          arg = caller_arg(x),
-                                                          call = caller_env()) {
+S7::method(as_string_replacements, class_any) <- function(
+  x,
+  ...,
+  arg = caller_arg(x),
+  call = caller_env()
+) {
   as_api_object(x, class_string_replacements, ..., arg = arg, call = call)
 }

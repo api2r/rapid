@@ -54,39 +54,47 @@ class_paths <- S7::new_class(
 #' as_paths(mtcars)
 as_paths <- S7::new_generic("as_paths", "x")
 
-S7::method(as_paths, class_data.frame) <- function(x,
-                                                   ...,
-                                                   arg = caller_arg(x),
-                                                   call = caller_env()) {
+S7::method(as_paths, class_data.frame) <- function(
+  x,
+  ...,
+  arg = caller_arg(x),
+  call = caller_env()
+) {
   class_paths(x)
 }
 
-S7::method(as_paths, class_any) <- function(x,
-                                            ...,
-                                            arg = caller_arg(x),
-                                            call = caller_env()) {
+S7::method(as_paths, class_any) <- function(
+  x,
+  ...,
+  arg = caller_arg(x),
+  call = caller_env()
+) {
   as_api_object(x, class_paths, ..., arg = arg, call = call)
 }
 
 .parse_paths <- S7::new_generic(".parse_paths", "paths")
 
-S7::method(.parse_paths, class_data.frame | class_paths) <- function(paths,
-                                                                     ...) {
+S7::method(.parse_paths, class_data.frame | class_paths) <- function(
+  paths,
+  ...
+) {
   paths
 }
 
-S7::method(.parse_paths, class_list) <- function(paths,
-                                                 openapi,
-                                                 x,
-                                                 call = caller_env()) {
+S7::method(.parse_paths, class_list) <- function(
+  paths,
+  openapi,
+  x,
+  call = caller_env()
+) {
   if (!is.null(openapi) && openapi >= "3") {
     return(.parse_openapi_spec(x, call = call))
   }
   return(tibble::tibble())
 }
+# nocov start
 
-.parse_openapi_spec <- function(x, call = caller_env()) { # nocov start
-  .check_tibblify_version(call = call)
+.parse_openapi_spec <- function(x, call = caller_env()) {
   rlang::try_fetch(
     {
       tibblify::parse_openapi_spec(x)
@@ -99,31 +107,6 @@ S7::method(.parse_paths, class_list) <- function(paths,
       )
     }
   )
-}
-
-.check_tibblify_version <- function(call = caller_env()) {
-  expected_body <- c(
-    "{",
-    "openapi_spec <- read_spec(file)",
-    "version <- openapi_spec$openapi",
-    "if (is_null(version) || version < \"3\") {\n    cli_abort(\"OpenAPI versions before 3 are not supported.\")\n}",
-    "if (is_installed(\"memoise\")) {\n    memoise::forget(parse_schema_memoised)\n}",
-    "out <- purrr::map(openapi_spec$paths, ~{\n    parse_path_item_object(path_item_object = .x, openapi_spec = openapi_spec)\n})",
-    "fast_tibble(list(endpoint = names2(out), operations = unname(out)))"
-  )
-  actual_body <- as.character(body(tibblify::parse_openapi_spec))
-
-  if (!identical(actual_body, expected_body)) {
-    cli::cli_abort(
-      c(
-        "Incorrect tibblify version.",
-        i = "This package requires an in-progress version of the package tibblify.",
-        i = "To parse this spec, first {.run pak::pak('mgirlich/tibblify#193')}."
-      ),
-      class = "rapid_error_bad_tibblify",
-      call = call
-    )
-  }
 }
 
 # nocov end

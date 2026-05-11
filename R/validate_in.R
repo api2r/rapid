@@ -10,7 +10,8 @@ validate_in_enums <- function(obj, value_name, enum_name) {
 
 .check_all_in_enums <- function(values, enums) {
   unlist(purrr::map2(
-    values, enums,
+    values,
+    enums,
     .check_one_in_enum
   ))
 }
@@ -30,10 +31,12 @@ validate_in_enums <- function(obj, value_name, enum_name) {
   )
 }
 
-.msg_some_not_in_fixed <- function(value_name,
-                                   enums,
-                                   missing_msgs,
-                                   enum_name = "the designated values") {
+.msg_some_not_in_fixed <- function(
+  value_name,
+  enums,
+  missing_msgs,
+  enum_name = "the designated values"
+) {
   enum_name <- cli::format_inline(enum_name)
   c(
     cli::format_inline("{.arg {value_name}} must be one of {enum_name}."),

@@ -30,8 +30,10 @@ class_api_key_security_scheme <- S7::new_class(
     parameter_name = character_scalar_property("parameter_name"),
     location = character_scalar_property("location")
   ),
-  constructor = function(parameter_name = character(),
-                         location = c("query", "header", "cookie")) {
+  constructor = function(
+    parameter_name = character(),
+    location = c("query", "header", "cookie")
+  ) {
     if (length(parameter_name)) {
       location <- rlang::arg_match(location)
     } else {
@@ -75,10 +77,12 @@ S7::method(length, class_api_key_security_scheme) <- function(x) {
 #' @export
 #' @family components_security_schemes
 #' @family components
-as_api_key_security_scheme <- function(x,
-                                       ...,
-                                       arg = caller_arg(x),
-                                       call = caller_env()) {
+as_api_key_security_scheme <- function(
+  x,
+  ...,
+  arg = caller_arg(x),
+  call = caller_env()
+) {
   as_api_object(
     x,
     class_api_key_security_scheme,

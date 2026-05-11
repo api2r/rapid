@@ -75,33 +75,40 @@ S7::method(as_security_scheme, abstract_security_scheme) <- function(x, ...) {
   x
 }
 
-S7::method(as_security_scheme, class_list) <- function(x,
-                                                       ...,
-                                                       arg = caller_arg(x),
-                                                       call = caller_env()) {
+S7::method(as_security_scheme, class_list) <- function(
+  x,
+  ...,
+  arg = caller_arg(x),
+  call = caller_env()
+) {
   if (!length(x) || !any(lengths(x))) {
     return(NULL)
   }
   type <- snakecase::to_snake_case(x$type)
   x$type <- NULL
-  switch(type,
+  switch(
+    type,
     api_key = as_api_key_security_scheme(x, ..., arg = arg, call = call),
     oauth_2 = as_oauth2_security_scheme(x, ..., arg = arg, call = call),
     oauth2 = as_oauth2_security_scheme(x, ..., arg = arg, call = call)
   )
 }
 
-S7::method(as_security_scheme, NULL) <- function(x,
-                                                 ...,
-                                                 arg = caller_arg(x),
-                                                 call = caller_env()) {
+S7::method(as_security_scheme, NULL) <- function(
+  x,
+  ...,
+  arg = caller_arg(x),
+  call = caller_env()
+) {
   NULL
 }
 
-S7::method(as_security_scheme, class_any) <- function(x,
-                                                      ...,
-                                                      arg = caller_arg(x),
-                                                      call = caller_env()) {
+S7::method(as_security_scheme, class_any) <- function(
+  x,
+  ...,
+  arg = caller_arg(x),
+  call = caller_env()
+) {
   msg <- "Can't coerce {.arg {arg}} {.cls {class(x)}} to {.cls rapid::security_scheme}."
   if (missing(x)) {
     msg <- c(

@@ -22,7 +22,9 @@ test_that("as_api_object() warns about unexpected fields", {
     )
   )
   expect_warning(
-    {as_api_object(list(start = 1, end = 2, a = 1), simple_class)},
+    {
+      as_api_object(list(start = 1, end = 2, a = 1), simple_class)
+    },
     class = "rapid_warning_extra_names"
   )
 })

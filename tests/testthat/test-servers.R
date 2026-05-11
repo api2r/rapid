@@ -47,7 +47,8 @@ test_that("length() of a servers reports the overall length", {
           default = c("demo", "8443", "v2"),
           description = c(
             "The active user's folder.",
-            NA, NA
+            NA,
+            NA
           ),
           enum = list(
             NULL,
@@ -123,7 +124,8 @@ test_that("as_servers() returns expected objects", {
           name = c("username", "port", "basePath"),
           description = c(
             "this value is assigned by the service provider",
-            NA, NA
+            NA,
+            NA
           ),
           default = c("demo", "8443", "v2"),
           enum = list(NULL, c("8443", "443"), NULL)

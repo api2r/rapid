@@ -37,11 +37,13 @@ class_oauth2_security_scheme <- S7::new_class(
     client_credentials_flow = class_oauth2_token_flow,
     authorization_code_flow = class_oauth2_authorization_code_flow
   ),
-  constructor = function(...,
-                         implicit_flow = class_oauth2_implicit_flow(),
-                         password_flow = class_oauth2_token_flow(),
-                         client_credentials_flow = class_oauth2_token_flow(),
-                         authorization_code_flow = class_oauth2_authorization_code_flow()) {
+  constructor = function(
+    ...,
+    implicit_flow = class_oauth2_implicit_flow(),
+    password_flow = class_oauth2_token_flow(),
+    client_credentials_flow = class_oauth2_token_flow(),
+    authorization_code_flow = class_oauth2_authorization_code_flow()
+  ) {
     check_dots_empty()
     S7::new_object(
       S7::S7_object(),
