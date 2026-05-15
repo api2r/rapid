@@ -13,7 +13,7 @@ If `gh` is not authenticated, stop and ask the user to authenticate before conti
 
 ## Looking up IDs
 
-The hardcoded IDs below are correct for this repo as of 2026-04-28 13:47:49 UTC. If they ever change, or if you're working in a fork, re-run these queries to get fresh values:
+The hardcoded IDs below are correct for this repo as of 2026-05-15 13:34:15 UTC. If they ever change, or if you're working in a fork, re-run these queries to get fresh values:
 
 ```bash
 # Repository node ID
