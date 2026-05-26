@@ -68,8 +68,7 @@
        .. .. @ details    : <rapid::security_scheme_details>  list()
        .. .. @ description: chr(0) 
        @ paths     :Classes 'rapid::paths', 'S7_object' and 'data.frame':	0 obs. of  0 variables
-       <rapid::paths>  Named list()
-       .. - attr(*, "dim")= int [1:2] 0 0
+       <rapid::paths> 'data.frame':	0 obs. of  0 variables
        @ security  : <rapid::security>
        .. @ name                   : chr(0) 
        .. @ required_scopes        : list()
@@ -164,8 +163,7 @@
        .. .. ..  ..@ location      : chr "query"
        .. .. @ description: chr(0) 
        @ paths     :Classes 'rapid::paths', 'S7_object' and 'data.frame':	0 obs. of  0 variables
-       <rapid::paths>  Named list()
-       .. - attr(*, "dim")= int [1:2] 0 0
+       <rapid::paths> 'data.frame':	0 obs. of  0 variables
        @ security  : <rapid::security>
        .. @ name                   : chr [1:3] "ApiKeyHeaderAuth" "ApiKeyQueryAuth" "apiKey"
        .. @ required_scopes        :List of 3
@@ -217,8 +215,7 @@
        .. .. ..  ..@ location      : chr "query"
        .. .. @ description: chr(0) 
        @ paths     :Classes 'rapid::paths', 'S7_object' and 'data.frame':	0 obs. of  0 variables
-       <rapid::paths>  Named list()
-       .. - attr(*, "dim")= int [1:2] 0 0
+       <rapid::paths> 'data.frame':	0 obs. of  0 variables
        @ security  : <rapid::security>
        .. @ name                   : chr [1:3] "ApiKeyHeaderAuth" "ApiKeyQueryAuth" "apiKey"
        .. @ required_scopes        :List of 3
@@ -261,8 +258,7 @@
        .. .. @ details    : <rapid::security_scheme_details>  list()
        .. .. @ description: chr(0) 
        @ paths     :Classes 'rapid::paths', 'S7_object' and 'data.frame':	0 obs. of  0 variables
-       <rapid::paths>  Named list()
-       .. - attr(*, "dim")= int [1:2] 0 0
+       <rapid::paths> 'data.frame':	0 obs. of  0 variables
        @ security  : <rapid::security>
        .. @ name                   : chr [1:3] "ApiKeyHeaderAuth" "ApiKeyQueryAuth" "apiKey"
        .. @ required_scopes        :List of 3
@@ -314,8 +310,7 @@
        .. .. ..  ..@ location      : chr "query"
        .. .. @ description: chr(0) 
        @ paths     :Classes 'rapid::paths', 'S7_object' and 'data.frame':	0 obs. of  0 variables
-       <rapid::paths>  Named list()
-       .. - attr(*, "dim")= int [1:2] 0 0
+       <rapid::paths> 'data.frame':	0 obs. of  0 variables
        @ security  : <rapid::security>
        .. @ name                   : chr [1:3] "ApiKeyHeaderAuth" "ApiKeyQueryAuth" "apiKey"
        .. @ required_scopes        :List of 3

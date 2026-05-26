@@ -1,6 +1,6 @@
 Package: rapid
 Title: R 'API' Descriptions
-Version: 0.0.0.9003
+Version: 0.0.0.9004
 Authors@R: c(
     person("Jon", "Harmon", , "jonthegeek@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0003-4781-4346")),
@@ -22,7 +22,7 @@ Imports:
     jsonlite,
     purrr,
     rlang (>= 1.1.0),
-    S7 (>= 0.2.0),
+    S7 (>= 0.2.2.9000),
     snakecase,
     stbl (>= 0.3.0.9000),
     tibble,
@@ -34,7 +34,8 @@ Suggests:
     testthat (>= 3.0.0)
 Remotes:
     wranglezone/stbl,
-    wranglezone/tibblify
+    wranglezone/tibblify,
+    RConsortium/S7
 Config/roxygen2/version: 8.0.0
 Config/testthat/edition: 3
 Config/testthat/parallel: true
