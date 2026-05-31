@@ -3,7 +3,7 @@
     Code
       class_info(title = "My API")
     Condition
-      Error:
+      Error in `class_info()`:
       ! <rapid::info> object is invalid:
       - `version` must have the same length as `title`
       - `title` has 1 value.
@@ -14,7 +14,7 @@
     Code
       class_info(version = "My API")
     Condition
-      Error:
+      Error in `class_info()`:
       ! <rapid::info> object is invalid:
       - When `title` is not defined, `version` must be empty.
       - `version` has 1 value.
@@ -24,7 +24,7 @@
     Code
       class_info(summary = "My API")
     Condition
-      Error:
+      Error in `class_info()`:
       ! <rapid::info> object is invalid:
       - When `title` is not defined, `summary` must be empty.
       - `summary` has 1 value.

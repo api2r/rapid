@@ -3,7 +3,7 @@
     Code
       class_oauth2_authorization_code_flow("a")
     Condition
-      Error:
+      Error in `class_oauth2_authorization_code_flow()`:
       ! <rapid::oauth2_authorization_code_flow> object is invalid:
       - `token_url` must have the same length as `authorization_url`
       - `authorization_url` has 1 value.
@@ -14,7 +14,7 @@
     Code
       class_oauth2_authorization_code_flow(token_url = "a")
     Condition
-      Error:
+      Error in `class_oauth2_authorization_code_flow()`:
       ! <rapid::oauth2_authorization_code_flow> object is invalid:
       - When `authorization_url` is not defined, `token_url` must be empty.
       - `token_url` has 1 value.
@@ -24,7 +24,7 @@
     Code
       class_oauth2_authorization_code_flow(refresh_url = "a")
     Condition
-      Error:
+      Error in `class_oauth2_authorization_code_flow()`:
       ! <rapid::oauth2_authorization_code_flow> object is invalid:
       - When `authorization_url` is not defined, `refresh_url` must be empty.
       - `refresh_url` has 1 value.
@@ -34,7 +34,7 @@
     Code
       class_oauth2_authorization_code_flow(scopes = c(a = "a"))
     Condition
-      Error:
+      Error in `class_oauth2_authorization_code_flow()`:
       ! <rapid::oauth2_authorization_code_flow> object is invalid:
       - When `authorization_url` is not defined, `scopes` must be empty.
       - `scopes` has 1 value.

@@ -3,7 +3,7 @@
     Code
       class_oauth2_implicit_flow(refresh_url = "a")
     Condition
-      Error:
+      Error in `class_oauth2_implicit_flow()`:
       ! <rapid::oauth2_implicit_flow> object is invalid:
       - When `authorization_url` is not defined, `refresh_url` must be empty.
       - `refresh_url` has 1 value.
@@ -13,7 +13,7 @@
     Code
       class_oauth2_implicit_flow(scopes = c(a = "a"))
     Condition
-      Error:
+      Error in `class_oauth2_implicit_flow()`:
       ! <rapid::oauth2_implicit_flow> object is invalid:
       - When `authorization_url` is not defined, `scopes` must be empty.
       - `scopes` has 1 value.

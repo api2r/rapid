@@ -54,7 +54,7 @@
     Code
       class_license(name = "A", identifier = "A", url = "https://example.com")
     Condition
-      Error:
+      Error in `class_license()`:
       ! <rapid::license> object is invalid:
       - At most one of @identifier and @url must be supplied.
 
@@ -63,7 +63,7 @@
     Code
       class_license(identifier = "A")
     Condition
-      Error:
+      Error in `class_license()`:
       ! <rapid::license> object is invalid:
       - When `name` is not defined, `identifier` must be empty.
       - `identifier` has 1 value.
@@ -73,7 +73,7 @@
     Code
       class_license(url = "https://example.com")
     Condition
-      Error:
+      Error in `class_license()`:
       ! <rapid::license> object is invalid:
       - When `name` is not defined, `url` must be empty.
       - `url` has 1 value.

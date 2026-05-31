@@ -3,7 +3,7 @@
     Code
       class_security_scheme_details(letters)
     Condition
-      Error:
+      Error in `class_security_scheme_details()`:
       ! <rapid::security_scheme_details> object is invalid:
       - All values must be <security_scheme> objects.
       - Bad values at 1.
@@ -13,7 +13,7 @@
     Code
       class_security_scheme_details(list(letters, letters))
     Condition
-      Error:
+      Error in `class_security_scheme_details()`:
       ! <rapid::security_scheme_details> object is invalid:
       - All values must be <security_scheme> objects.
       - Bad values at 1 and 2.
@@ -24,7 +24,7 @@
       class_security_scheme_details(class_api_key_security_scheme(), letters,
       class_oauth2_security_scheme(), letters)
     Condition
-      Error:
+      Error in `class_security_scheme_details()`:
       ! <rapid::security_scheme_details> object is invalid:
       - All values must be <security_scheme> objects.
       - Bad values at 2 and 4.

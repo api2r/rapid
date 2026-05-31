@@ -3,7 +3,7 @@
     Code
       class_security(required_scopes = "a")
     Condition
-      Error:
+      Error in `class_security()`:
       ! <rapid::security> object is invalid:
       - When `name` is not defined, `required_scopes` must be empty.
       - `required_scopes` has 1 value.

@@ -3,7 +3,7 @@
     Code
       class_scopes("a")
     Condition
-      Error:
+      Error in `class_scopes()`:
       ! <rapid::scopes> object is invalid:
       - `description` must have the same length as `name`
       - `name` has 1 value.
@@ -14,7 +14,7 @@
     Code
       class_scopes("a", letters)
     Condition
-      Error:
+      Error in `class_scopes()`:
       ! <rapid::scopes> object is invalid:
       - `description` must have the same length as `name`
       - `name` has 1 value.
@@ -25,7 +25,7 @@
     Code
       class_scopes(letters, "a")
     Condition
-      Error:
+      Error in `class_scopes()`:
       ! <rapid::scopes> object is invalid:
       - `description` must have the same length as `name`
       - `name` has 26 values.
@@ -36,7 +36,7 @@
     Code
       class_scopes(character(), "a")
     Condition
-      Error:
+      Error in `class_scopes()`:
       ! <rapid::scopes> object is invalid:
       - When `name` is not defined, `description` must be empty.
       - `description` has 1 value.
@@ -46,7 +46,7 @@
     Code
       class_scopes("a", character())
     Condition
-      Error:
+      Error in `class_scopes()`:
       ! <rapid::scopes> object is invalid:
       - `description` must have the same length as `name`
       - `name` has 1 value.
