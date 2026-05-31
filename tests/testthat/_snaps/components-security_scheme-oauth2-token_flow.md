@@ -3,7 +3,7 @@
     Code
       class_oauth2_token_flow(refresh_url = "a")
     Condition
-      Error:
+      Error in `class_oauth2_token_flow()`:
       ! <rapid::oauth2_token_flow> object is invalid:
       - When `token_url` is not defined, `refresh_url` must be empty.
       - `refresh_url` has 1 value.
@@ -13,7 +13,7 @@
     Code
       class_oauth2_token_flow(scopes = c(a = "a"))
     Condition
-      Error:
+      Error in `class_oauth2_token_flow()`:
       ! <rapid::oauth2_token_flow> object is invalid:
       - When `token_url` is not defined, `scopes` must be empty.
       - `scopes` has 1 value.
@@ -58,7 +58,7 @@
     Code
       class_oauth2_token_flow(mean)
     Condition
-      Error:
+      Error in `class_oauth2_token_flow()`:
       ! <rapid::oauth2_token_flow> object properties are invalid:
       - @token_url must be <character>, not <closure>
 

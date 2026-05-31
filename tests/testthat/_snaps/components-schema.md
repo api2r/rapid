@@ -3,7 +3,7 @@
     Code
       class_schema(type = "string", nullable = NULL)
     Condition
-      Error:
+      Error in `class_schema()`:
       ! <rapid::schema> object is invalid:
       - `nullable` must have the same length as `type`
       - `type` has 1 value.

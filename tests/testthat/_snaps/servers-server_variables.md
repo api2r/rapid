@@ -3,7 +3,7 @@
     Code
       class_server_variables(letters)
     Condition
-      Error:
+      Error in `class_server_variables()`:
       ! <rapid::server_variables> object is invalid:
       - All values must be <string_replacements> objects.
       - Bad values at 1.
@@ -13,7 +13,7 @@
     Code
       class_server_variables(list(letters, letters))
     Condition
-      Error:
+      Error in `class_server_variables()`:
       ! <rapid::server_variables> object is invalid:
       - All values must be <string_replacements> objects.
       - Bad values at 1 and 2.
@@ -24,7 +24,7 @@
       class_server_variables(class_string_replacements(), letters,
       class_string_replacements(), letters)
     Condition
-      Error:
+      Error in `class_server_variables()`:
       ! <rapid::server_variables> object is invalid:
       - All values must be <string_replacements> objects.
       - Bad values at 2 and 4.

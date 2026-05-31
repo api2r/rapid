@@ -15,7 +15,7 @@
         "https://api.gigantic-server.com/v1"), description = c("Development server",
         "Staging server", "Production server")))
     Condition
-      Error:
+      Error in `class_rapid()`:
       ! <rapid::rapid> object is invalid:
       - When `info` is not defined, `servers` must be empty.
       - `servers` has 3 values.
@@ -28,7 +28,7 @@
           class_api_key_security_scheme("this_one", location = "header")))),
       security = class_security(name = "an_undefined_one"))
     Condition
-      Error:
+      Error in `class_rapid()`:
       ! <rapid::rapid> object is invalid:
       - `security` must be one of the `security_schemes` defined in `components`.
       - "an_undefined_one" is not in "the_defined_one".

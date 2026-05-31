@@ -14,7 +14,7 @@
     Code
       class_string_replacements("a")
     Condition
-      Error:
+      Error in `class_string_replacements()`:
       ! <rapid::string_replacements> object is invalid:
       - `default` must have the same length as `name`
       - `name` has 1 value.
@@ -25,7 +25,7 @@
     Code
       class_string_replacements("a", letters)
     Condition
-      Error:
+      Error in `class_string_replacements()`:
       ! <rapid::string_replacements> object is invalid:
       - `default` must have the same length as `name`
       - `name` has 1 value.
@@ -36,7 +36,7 @@
     Code
       class_string_replacements(letters, "a")
     Condition
-      Error:
+      Error in `class_string_replacements()`:
       ! <rapid::string_replacements> object is invalid:
       - `default` must have the same length as `name`
       - `name` has 26 values.
@@ -47,7 +47,7 @@
     Code
       class_string_replacements(character(), "a")
     Condition
-      Error:
+      Error in `class_string_replacements()`:
       ! <rapid::string_replacements> object is invalid:
       - When `name` is not defined, `default` must be empty.
       - `default` has 1 value.
@@ -69,7 +69,7 @@
     Code
       class_string_replacements("a", "b", enum = list("a", "b"))
     Condition
-      Error:
+      Error in `class_string_replacements()`:
       ! <rapid::string_replacements> object is invalid:
       - `enum` must be empty or have the same length as `name`
       - `name` has 1 value.
@@ -80,7 +80,7 @@
     Code
       class_string_replacements("a", "b", description = c("a", "b"))
     Condition
-      Error:
+      Error in `class_string_replacements()`:
       ! <rapid::string_replacements> object is invalid:
       - `description` must be empty or have the same length as `name`
       - `name` has 1 value.
@@ -91,7 +91,7 @@
     Code
       class_string_replacements(name = "a", default = "b", enum = "a")
     Condition
-      Error:
+      Error in `class_string_replacements()`:
       ! <rapid::string_replacements> object is invalid:
       - `default` must be in `enum`.
       - "b" is not in "a".
@@ -102,7 +102,7 @@
       class_string_replacements(name = c("a", "b"), default = c("b", "a"), enum = list(
         "a", "a"))
     Condition
-      Error:
+      Error in `class_string_replacements()`:
       ! <rapid::string_replacements> object is invalid:
       - `default` must be in `enum`.
       - "b" is not in "a".

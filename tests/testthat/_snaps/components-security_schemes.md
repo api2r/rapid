@@ -14,7 +14,7 @@
     Code
       class_security_schemes("a")
     Condition
-      Error:
+      Error in `class_security_schemes()`:
       ! <rapid::security_schemes> object is invalid:
       - `details` must have the same length as `name`
       - `name` has 1 value.
@@ -23,7 +23,7 @@
       class_security_schemes(details = class_security_scheme_details(
         class_api_key_security_scheme("parm", "query")))
     Condition
-      Error:
+      Error in `class_security_schemes()`:
       ! <rapid::security_schemes> object is invalid:
       - When `name` is not defined, `details` must be empty.
       - `details` has 1 value.
